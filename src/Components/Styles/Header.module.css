@@ -1,0 +1,107 @@
+.headerContainer {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #51BFF0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 2px 2px 20px #c5bfbf, -2px -2px 20px #fff;
+  z-index: 9999;
+}
+
+.logo {
+  width: 3rem;
+  margin: 0 0.7rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.dropdownMenu {
+  border: none;
+  background-color: #51BFF0;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.7rem;
+}
+
+.option {
+  background-color: #264653;
+}
+
+.dropdownMenu:hover {
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons > li > a {
+  color: #fff;
+  font-size: 15px;
+  margin: 0 10px;
+}
+
+.icons > li > a:hover {
+  color: #ff7f00;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.loginDropdownMenu {
+  width: 1rem;
+  border: none;
+  background-color: #51BFF0;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.7rem;
+}
+
+.userIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .headerLeft {
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  .dropdownMenu {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .icons > li > a {
+    font-size: 14px;
+  }
+
+  .userIcon {
+    width: 30px;
+    height: 30px;
+  }
+}

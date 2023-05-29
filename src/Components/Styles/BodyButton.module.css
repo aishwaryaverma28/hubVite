@@ -1,0 +1,45 @@
+.bodyBtns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.contactDropdown{
+    color: #0091C0;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+}
+.contact{
+    color: black;
+    font-size:small;
+    
+}
+.dataQuality{
+    color: #0091C0;  
+}
+.actionBtn{
+    width: 7rem;
+    border: none;
+    background-color: #51BFF0;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: white;
+    /* font-size: ; */
+    font-weight: bold;
+    margin: 0rem 0.7rem;
+}
+.actionBtn:hover{
+    background-color: orange;
+}
+.actionBtnOrange{
+    /* width: 7rem; */
+    border: none;
+    background-color: orange;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: white;
+    /* font-size: ; */
+    font-weight: bold;
+    margin: 0rem 0.7rem;
+}

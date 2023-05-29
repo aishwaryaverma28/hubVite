@@ -1,0 +1,99 @@
+.tableLeft{
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 2px 20px #c5bfbf, -2px -2px 20px #fff;
+    border-radius: 10px;
+    width: 13rem;
+    color: grey;
+    padding: 0.5rem;
+}
+.searchBar2{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+.tabs> button{
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 20rem;
+    margin: 0.2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.sideBarDropDown{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 1rem;
+}
+.SidebarBtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+}
+.tableDataBox{
+     display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+.tab1HeaderLeft{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+}
+.tab1HeaderLeft select{
+    border: none;
+    font-weight: bold;
+}
+.tab1Header{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 1rem;
+align-items: center;
+}
+.tab1HeaderRightBtn{
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+}
+.searchBar{
+    padding: 0.5rem 5rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #a1daf2;
+}
+th,
+td{
+    padding: 1rem;
+}
+th{
+    background: #51BFF0;
+}
+tr:nth-of-type(2n) {
+    background: hsla(0, 15%, 91%, 0.5);
+}
+@media (max-width:650px){
+    th{
+        display: none;
+    }
+    td{ display: block;
+    }
+    td::before{
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
+
+
+
+  
