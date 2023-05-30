@@ -5,10 +5,21 @@ import Tab1 from './Tab1';
 import Sidebar from './Sidebar';
 const BodyTabination = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [employees, setEmployees] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleTabClick = (index) => {
     setActiveTab(index);
+    setEmployees(tabs[activeTab]?.data);
+    // employees.map((ele)=> console.log(ele.Name));
   };
+  const handleSearchTermChange = (event) => {
+    setSearchTerm(event.target.value);
+   };
+  const filteredItems = ((employees||[]).filter((item) =>
+   item.Name.toLowerCase().includes(searchTerm.toLowerCase())
+  ));
+    console.log(filteredItems);
 
   const tabs = [
     {
@@ -109,7 +120,7 @@ const BodyTabination = () => {
             onClick={() => handleTabClick(index)}>
             {tab.title}
           </button>
-        ))}
+          ))}
         <h2>{tabs[activeTab].title}</h2>
       </div>
       {(tabs[activeTab].title === 'All Contacts') && (
@@ -122,7 +133,7 @@ const BodyTabination = () => {
 <div className={styles.tableDataBox}>
 <Sidebar/>
       <div className={styles.tableData}>
-      <input type='text' placeholder="Search" className={styles.searchBar}/>
+      <input type='text' placeholder="Search" value={searchTerm} onChange={handleSearchTermChange} className={styles.searchBar}/>
       <table>
         <thead>
           <tr>
@@ -139,8 +150,7 @@ const BodyTabination = () => {
           </tr>
         </thead>
         <tbody>
-          {tabs[activeTab].data.map((row) => 
-          
+          {filteredItems.map((row)=>
           (
             <tr key={row.id}>
               <td>{row.id}</td>

@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import styles from'./Styles/BodyTabination.module.css'
 const Sidebar = () => {
@@ -31,11 +33,11 @@ const Sidebar = () => {
                 <option value="5">Leads</option>
             </select>
             <br/><br/>
-            <button className={styles.SidebarBtns}><span>Name</span><i class="fa-solid fa-x"></i></button>
+            <button className={styles.SidebarBtns}><span>Name</span><i className="fa-solid fa-x"></i></button>
             <br/>
-            <button className={styles.SidebarBtns}><span>E-mail ID</span><i class="fa-solid fa-x"></i></button>
+            <button className={styles.SidebarBtns}><span>E-mail ID</span><i className="fa-solid fa-x"></i></button>
             <br/>
-            <button className={styles.SidebarBtns}><span>Leads</span><i class="fa-solid fa-x"></i></button>
+            <button className={styles.SidebarBtns}><span>Leads</span><i className="fa-solid fa-x"></i></button>
             
             <br/><br/>
 
