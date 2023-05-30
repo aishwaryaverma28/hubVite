@@ -81,19 +81,25 @@ th{
 tr:nth-of-type(2n) {
     background: hsla(0, 15%, 91%, 0.5);
 }
-@media (max-width:650px){
+@media (max-width:800px){
     th{
         display: none;
     }
-    td{ display: block;
+    td{ 
+        display: block;
+        
+    }
+    table{
+        width: 95vw;
     }
     td::before{
         content: attr(data-cell) ": ";
         font-weight: 700;
         text-transform: capitalize;
     }
+    .tableLeft{
+        display: none;
+    }   
 }
 
 
-
-  

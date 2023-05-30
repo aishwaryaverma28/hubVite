@@ -75,19 +75,41 @@ a {
   object-fit: cover;
   border-radius: 50%;
 }
-
-@media screen and (max-width: 768px) {
+.hamburgerMenu{
+  display: none;
+}
+.menuContent{
+  width: 50vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #a2d2ff;
+  box-shadow: 2px 2px 20px #c5bfbf, -2px -2px 20px #fff;
+}
+@media screen and (max-width: 800px) {
+  
   .headerContainer {
-    flex-direction: column;
-    padding: 1rem;
+    width: 100%;
   }
-
   .headerLeft {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    display: none;
+  }
+  .hamburgerMenu{
+    display: inline;
+    
+  }
+  .hamburgerMenu> button>a{
+    color: #51BFF0;
+    font-size: 15px;
+    margin: 0 10px;
+    background: #fff;
+    border: none;
   }
 
-  .logo {
+  .logo img {
     margin: 0;
+    width: 0.7rem;
     margin-bottom: 1rem;
   }
 

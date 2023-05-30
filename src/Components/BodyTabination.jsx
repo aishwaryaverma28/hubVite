@@ -3,6 +3,95 @@ import table from './table';
 import styles from'./Styles/BodyTabination.module.css'
 import Tab1 from './Tab1';
 import Sidebar from './Sidebar';
+const tabs = [
+  {
+    title: 'All Contacts',
+    data: table,
+  },
+  {
+    title: 'My Contacts',
+    data: [
+      {
+        id: 1,
+        Name: 'Tiger Nixon',
+        LastName: 'Nixon',
+        Title: 'N/A',
+        Email: 'TigerNixon@gmail.com',
+        Company: 'N/A',
+        Position: 'System Architect',
+        Office: 'Edinburgh',
+        Leads: 'N/A',
+        StartDate: '2011-04-25',
+      },
+      {
+        id: 2,
+        Name: 'Garrett Winters',
+        LastName: 'Winters',
+        Title: 'N/A',
+        Email: 'GarrettWinters@gmail.com',
+        Company: 'N/A',
+        Position: 'Accountant',
+        Office: 'Tokyo',
+        Leads: 'N/A',
+        StartDate: '2011-07-25',
+      },
+      {
+        id: 3,
+        Name: 'Ashton Cox',
+        LastName: 'Cox',
+        Title: 'N/A',
+        Email: 'Vaneet.Gupta@ezuka.com',
+        Company: 'N/A',
+        Position: 'Junior Technical Author',
+        Office: 'San Francisco',
+        Leads: 'N/A',
+        StartDate: '2009-01-12',
+      },
+    ],
+  },
+  {
+    title: 'Unassigned Contacts',
+    data: [
+      {
+        id: 1,
+        Name: 'Tiger Nixon',
+        LastName: 'Nixon',
+        Title: 'N/A',
+        Email: 'TigerNixon@gmail.com',
+        Company: 'N/A',
+        Position: 'System Architect',
+        Office: 'Edinburgh',
+        Leads: 'N/A',
+        StartDate: '2011-04-25',
+      },
+      {
+        id: 2,
+        Name: 'Garrett Winters',
+        LastName: 'Winters',
+        Title: 'N/A',
+        Email: 'GarrettWinters@gmail.com',
+        Company: 'N/A',
+        Position: 'Accountant',
+        Office: 'Tokyo',
+        Leads: 'N/A',
+        StartDate: '2011-07-25',
+      },
+      {
+        id: 3,
+        Name: 'Ashton Cox',
+        LastName: 'Cox',
+        Title: 'N/A',
+        Email: 'Vaneet.Gupta@ezuka.com',
+        Company: 'N/A',
+        Position: 'Junior Technical Author',
+        Office: 'San Francisco',
+        Leads: 'N/A',
+        StartDate: '2009-01-12',
+      },
+    ],
+  },
+];
+
 const BodyTabination = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [employees, setEmployees] = useState([]);
@@ -11,105 +100,17 @@ const BodyTabination = () => {
   const handleTabClick = (index) => {
     setActiveTab(index);
     setEmployees(tabs[activeTab]?.data);
-    // employees.map((ele)=> console.log(ele.Name));
+    console.log(activeTab);
+    // console.log(index);
   };
   const handleSearchTermChange = (event) => {
     setSearchTerm(event.target.value);
    };
-  const filteredItems = ((employees||[]).filter((item) =>
+  const filteredItems = ((tabs[activeTab]?.data||[]).filter((item) =>
    item.Name.toLowerCase().includes(searchTerm.toLowerCase())
   ));
-    console.log(filteredItems);
-
-  const tabs = [
-    {
-      title: 'All Contacts',
-      data: table,
-    },
-    {
-      title: 'My Contacts',
-      data: [
-        {
-          id: 1,
-          Name: 'Tiger Nixon',
-          LastName: 'Nixon',
-          Title: 'N/A',
-          Email: 'TigerNixon@gmail.com',
-          Company: 'N/A',
-          Position: 'System Architect',
-          Office: 'Edinburgh',
-          Leads: 'N/A',
-          StartDate: '2011-04-25',
-        },
-        {
-          id: 2,
-          Name: 'Garrett Winters',
-          LastName: 'Winters',
-          Title: 'N/A',
-          Email: 'GarrettWinters@gmail.com',
-          Company: 'N/A',
-          Position: 'Accountant',
-          Office: 'Tokyo',
-          Leads: 'N/A',
-          StartDate: '2011-07-25',
-        },
-        {
-          id: 3,
-          Name: 'Ashton Cox',
-          LastName: 'Cox',
-          Title: 'N/A',
-          Email: 'Vaneet.Gupta@ezuka.com',
-          Company: 'N/A',
-          Position: 'Junior Technical Author',
-          Office: 'San Francisco',
-          Leads: 'N/A',
-          StartDate: '2009-01-12',
-        },
-      ],
-    },
-    {
-      title: 'Unassigned Contacts',
-      data: [
-        {
-          id: 1,
-          Name: 'Tiger Nixon',
-          LastName: 'Nixon',
-          Title: 'N/A',
-          Email: 'TigerNixon@gmail.com',
-          Company: 'N/A',
-          Position: 'System Architect',
-          Office: 'Edinburgh',
-          Leads: 'N/A',
-          StartDate: '2011-04-25',
-        },
-        {
-          id: 2,
-          Name: 'Garrett Winters',
-          LastName: 'Winters',
-          Title: 'N/A',
-          Email: 'GarrettWinters@gmail.com',
-          Company: 'N/A',
-          Position: 'Accountant',
-          Office: 'Tokyo',
-          Leads: 'N/A',
-          StartDate: '2011-07-25',
-        },
-        {
-          id: 3,
-          Name: 'Ashton Cox',
-          LastName: 'Cox',
-          Title: 'N/A',
-          Email: 'Vaneet.Gupta@ezuka.com',
-          Company: 'N/A',
-          Position: 'Junior Technical Author',
-          Office: 'San Francisco',
-          Leads: 'N/A',
-          StartDate: '2009-01-12',
-        },
-      ],
-    },
-  ];
-
+  
+  
   return (
     <div className={styles.tabBox}>
       <div className={styles.tabs}>
@@ -122,6 +123,7 @@ const BodyTabination = () => {
           </button>
           ))}
         <h2>{tabs[activeTab].title}</h2>
+        
       </div>
       {(tabs[activeTab].title === 'All Contacts') && (
         <>
@@ -150,7 +152,8 @@ const BodyTabination = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredItems.map((row)=>
+          {/* {tabs[activeTab].data.map((row)=> */}
+           {filteredItems.map((row)=>
           (
             <tr key={row.id}>
               <td>{row.id}</td>
