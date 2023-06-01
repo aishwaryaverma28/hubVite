@@ -27,7 +27,7 @@ const BodyButton = () => {
                 <option>Restore Records</option>
             </select>
             <button className={styles.actionBtn}>Import</button>
-            <button className={styles.actionBtnOrange}>Create Contact</button>
+            <button className={styles.actionBtnOrange}><span className={styles.arrowOrange}><i className="fa-sharp fa-solid fa-arrow-right fa-xl"></i></span>Create Contact</button>
         </div>
     </div>
   )

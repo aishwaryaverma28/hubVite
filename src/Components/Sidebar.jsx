@@ -9,12 +9,13 @@ const Sidebar = () => {
                 Out Line
             </h3>
             <br/>
-            <hr/>
+            <hr className={styles.straightLine}/>
+            <br/>
             <br/>
             <h4>
                 <i className='fa-solid fa-diagram-next'></i>
                 Group Rows
-            </h4>
+            </h4><br/>
             <input type='text' placeholder="Search" className={styles.searchBar2}/>
             <br/><br/><br/>
             <hr/>
@@ -22,7 +23,7 @@ const Sidebar = () => {
             <h4>
                 <i className='fa-solid fa-chart-simple'></i>
                 Columns
-            </h4>
+            </h4><br/>
             <select name='Name' className={styles.sideBarDropDown}>
                 <option value="1">Search...</option>
                 <option value="2">Name</option>

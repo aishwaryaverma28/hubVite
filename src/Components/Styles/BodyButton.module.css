@@ -5,10 +5,12 @@
     padding: 2rem;
 }
 .contactDropdown{
+    border: 2px solid black;
+    width: 9rem;
     color: #0091C0;
     border: none;
-    font-size: large;
-    font-weight: bold;
+    font-size: 1.7rem;
+    /* font-weight: bold; */
 }
 .contact{
     color: black;
@@ -17,15 +19,16 @@
 }
 .dataQuality{
     color: #0091C0;  
+    font-size: 0.9rem;
+    font-weight:550;
 }
 .actionBtn{
     width: 7rem;
     border: none;
     background-color: #51BFF0;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 0.5rem;
     border-radius: 1rem;
     color: white;
-    /* font-size: ; */
     font-weight: bold;
     margin: 0rem 0.7rem;
 }
@@ -34,12 +37,25 @@
 }
 .actionBtnOrange{
     /* width: 7rem; */
+    /* border: 2px soild orange !important; */
     border: none;
     background-color: orange;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     border-radius: 1rem;
     color: white;
     /* font-size: ; */
     font-weight: bold;
     margin: 0rem 0.7rem;
+}
+.arrowOrange{
+    /* border: 2px soild black; */
+    margin-right: 1rem;
+    padding: 0.5rem; 
+    border-radius: 50%;
+    background-color: rgb(246, 192, 90);
+}
+.actionBtnOrange:hover{
+    /* border: 3px soild orange; */
+    background-color: rgb(246, 192, 90);
+
 }

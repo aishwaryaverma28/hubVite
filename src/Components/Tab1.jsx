@@ -30,7 +30,7 @@ const Tab1 = () => {
             <option>Open Deal</option>
             <option>Unqualified</option>
         </select>
-        <h4><i className="fa-solid fa-filter"></i>Advanced Filters (0)</h4>
+        <h5><i className="fa-solid fa-filter"></i>Advanced Filters (0)</h5>
     </div>
     <div className={styles.tab1HeaderRight}> 
     <button className={styles.tab1HeaderRightBtn}><i className="fa-solid fa-cloud-arrow-down"></i>

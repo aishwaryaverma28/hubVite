@@ -1,4 +1,4 @@
-.tableLeft{
+  .tableLeft {
     position: sticky;
     top: 0;
     left: 0;
@@ -6,20 +6,51 @@
     border-radius: 10px;
     width: 13rem;
     color: grey;
+    padding:2rem 1rem;
+ }
+  
+  .tab {
+    cursor: pointer;
+    background-color: #f3eeee;
+    border: 1px solid #cacaca;
+    width: 16.5rem;
+    padding: 0.5rem;
+   }
+  .tab1 {
+    background-color: #fff;
+    border-bottom: 1px solid #cacaca;
+    width: 3rem;
+  }
+  .tab3{
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #cacaca;
+    color:#3679AF ;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+  .tab3:hover{
+    color: black;
+  }
+  
+  .activeTab {
+    width: 16.5rem;
+    background-color: #fff;
+    position: relative;
+    border-bottom: none; 
     padding: 0.5rem;
 }
+  
+.tabs > button {
+    text-align: left;
+ }
+  
+
 .searchBar2{
     padding: 0.5rem 1rem;
     width: 100%;
     border-radius: 1rem;
-}
-.tabs> button{
-    font-weight: bold;
-    padding: 0.5rem;
-    width: 20rem;
-    margin: 0.2rem;
-    border: none;
-    border-radius: 5px;
 }
 
 .sideBarDropDown{
@@ -36,7 +67,7 @@
     border: none;
 }
 .tableDataBox{
-     display: flex;
+    display: flex;
     gap: 1rem;
     padding: 0.5rem;
 }
@@ -51,35 +82,51 @@
     font-weight: bold;
 }
 .tab1Header{
-display: flex;
+    display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 padding: 1rem;
 align-items: center;
 }
 .tab1HeaderRightBtn{
+    border: 1px solid grey;
+    color: rgb(92, 91, 91);
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
+    font-weight: bold;
 }
 .searchBar{
     padding: 0.5rem 5rem;
     margin: 0.5rem;
     border-radius: 1rem;
 }
+.straightLine{
+    border-color: #DDDDDD;
+}
+/* ==============================================`table css */
 table{
+    overflow-x: scroll;
+    margin: 0 auto;
+    background: #fff;
     width: 100%;
-    border-collapse: collapse;
-    background: #a1daf2;
 }
 th,
 td{
-    padding: 1rem;
+    padding: 0.8rem;
+}
+td{
+    font-size: 13.5px;
+    /* font-weight: bold; */
+    color: rgb(82, 82, 82);
+    -webkit-font-smoothing: antialiased;
 }
 th{
-    background: #51BFF0;
+    background: #8b8b8b;
+    color: white;
+    border: white;
 }
-tr:nth-of-type(2n) {
-    background: hsla(0, 15%, 91%, 0.5);
+tr:nth-of-type(2n+1) {
+    background: hsla(0, 2%, 88%, 0.5);
 }
 @media (max-width:800px){
     th{

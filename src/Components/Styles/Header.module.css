@@ -75,15 +75,43 @@ a {
   object-fit: cover;
   border-radius: 50%;
 }
-.hamburgerMenu{
+.NavhamburgerMenu{
   display: none;
 }
+.NavhamburgerMenu> button>a{
+    padding: 1rem;
+    background-color: #51BFF0;
+    border: none;
+    color: #fff;
+}
+.NavhamburgerMenu>button>a:hover{
+  color: orange;
+}
+.closeButton{
+  border: none;
+  background-color:  #51BFF0;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color:#fff;
+  cursor: pointer;
+}
+.closeButton:hover{
+  color: orange;
+}
+.closeBtnCont{
+  display: flex;
+  justify-content: right;
+}
+.hamburgerMenuContainer{
+display: none;
+}
 .menuContent{
-  width: 50vw;
-  height: 30vh;
+  width: 25vw;
+  height: 45vh;
   display: flex;
   flex-direction: column;
-  background-color: #a2d2ff;
+  background-color: #51BFF0;
+  border-bottom-right-radius: 1rem;
   box-shadow: 2px 2px 20px #c5bfbf, -2px -2px 20px #fff;
 }
 @media screen and (max-width: 800px) {
@@ -95,22 +123,21 @@ a {
     /* margin-bottom: 1rem; */
     display: none;
   }
-  .hamburgerMenu{
+  .NavhamburgerMenu{
+    display: inline;    
+  }
+  .hamburgerMenuContainer{
     display: inline;
-    
-  }
-  .hamburgerMenu> button>a{
-    color: #51BFF0;
-    font-size: 15px;
-    margin: 0 10px;
-    background: #fff;
-    border: none;
-  }
+    }
+    .menuContent{
+      width: 50vw;
+    }
 
-  .logo img {
+   .logo img {
     margin: 0;
     width: 0.7rem;
     margin-bottom: 1rem;
+    border-radius: 50%;
   }
 
   .dropdownMenu {

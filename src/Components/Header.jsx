@@ -1,27 +1,30 @@
 import React, {useState} from 'react';
 import styles from './Styles/Header.module.css';
 
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen);
   };
+  
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
     <header className={styles.headerContainer}>
-      <img src='https://www.leadplaner.com/dashboard/assets/img/logo.svg' className={styles.logo} alt="Logo" />
+      <img src='https://www.leadplaner.com/assetmain/images/leadplaner_logo.png' className={styles.logo} alt="Logo" />
       <div className={styles.headerLeft}>
-        
-
-        <select className={styles.dropdownMenu}>
+        <select className={styles.dropdownMenu}>        
           <option value="#">Contacts</option>
           <option value="option2" className={styles.option}>Companies</option>
           <option value="option3" className={styles.option}>Calls</option>
           <option value="option4" className={styles.option}>Active Feed</option>
           <option value="option5" className={styles.option}>Lists</option>
         </select>
-
         <select className={styles.dropdownMenu}>
           <option value="#">Conversations</option>
           <option value="option2" className={styles.option}>About 1</option>
@@ -85,20 +88,24 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.hamburgerMenu}>
+      <div className={styles.NavhamburgerMenu}>
         <button className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <a href="#">
-            <i className="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-bars fa-2xl"></i>
           </a>
         </button>
-
-        
       </div>
-
-
     </header>
+
+    {/* ===================================================================hamburger menu */}
     {isMenuOpen && (
+      <div className={styles.hamburgerMenuContainer}>
       <div className={styles.menuContent}>
+        <div className={styles.closeBtnCont}>
+          <button className={styles.closeButton} onClick={closeMenu}>
+            <i class="fa-sharp fa-solid fa-x fa-2xl"></i>
+          </button>
+        </div>
         <select className={styles.dropdownMenu}>
           <option value="#">Contacts</option>
           <option value="option2" className={styles.option}>Companies</option>
@@ -136,6 +143,7 @@ const Header = () => {
           <option value="option2" className={styles.option}>About 1</option>
           <option value="option3" className={styles.option}>About 2</option>
         </select>
+      </div>
       </div>
     )}
     </>
