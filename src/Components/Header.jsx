@@ -242,9 +242,9 @@ const Header = () => {
         </div>
         <div className={styles.NavhamburgerMenu}>
           <button className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-            <a href="#">
+            {/* <a href="#"> */}
               <i className="fa-solid fa-bars fa-2xl"></i>
-            </a>
+            {/* </a> */}
           </button>
         </div>
       </header>

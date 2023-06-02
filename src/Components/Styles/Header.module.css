@@ -40,8 +40,8 @@
 }
 .dropdownMenu{
 position: absolute;
-top: 2.8rem;
-right: 1rem;
+top: 2.5rem;
+right: 0.5rem;
 padding: 0.5rem;
 width: max-content;
 background: #51BFF0;
@@ -176,3 +176,4 @@ display: none;
     height: 30px;
   }
 }
+@media screen and (max-width: 500px) {}
