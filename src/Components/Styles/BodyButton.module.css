@@ -3,26 +3,50 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 2rem;
-}
-.contactDropdown{
-    border: 2px solid black;
-    width: 9rem;
-    color: #0091C0;
-    border: none;
-    font-size: 1.7rem;
-    /* font-weight: bold; */
-}
-.contact{
-    color: black;
-    font-size:small;
     
 }
+
+.dropdown{
+    position: relative;
+  }
+  .dropdownToggle{
+    background-color: #fff;
+     border: none;
+     color:#51BFF0;
+     font-size:1.7rem;
+  }
+  .dropdownToggle:hover{
+    color: #ff7f00;
+    cursor: pointer;
+  }
+  .dropdownMenu{
+  position: absolute;
+  top: 2.8rem;
+  padding: 1rem;
+  width: max-content;
+  background: #fff;
+  border-radius: 5px;
+  color: #000;
+  font-size: 0.9rem;
+  line-height: 1.7rem; 
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  }
+  
 .dataQuality{
     color: #0091C0;  
-    font-size: 0.9rem;
-    font-weight:550;
+    font-size: 1rem;
+    /* font-weight:550; */
+}
+.bodyBtnRight{
+      display: flex;
+      flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 .actionBtn{
+    
     width: 7rem;
     border: none;
     background-color: #51BFF0;
@@ -36,26 +60,20 @@
     background-color: orange;
 }
 .actionBtnOrange{
-    /* width: 7rem; */
-    /* border: 2px soild orange !important; */
-    border: none;
+     border: none;
     background-color: orange;
     padding: 0.7rem 1rem;
     border-radius: 1rem;
     color: white;
-    /* font-size: ; */
     font-weight: bold;
     margin: 0rem 0.7rem;
 }
 .arrowOrange{
-    /* border: 2px soild black; */
     margin-right: 1rem;
     padding: 0.5rem; 
     border-radius: 50%;
     background-color: rgb(246, 192, 90);
 }
 .actionBtnOrange:hover{
-    /* border: 3px soild orange; */
-    background-color: rgb(246, 192, 90);
-
+   background-color: rgb(246, 192, 90);
 }

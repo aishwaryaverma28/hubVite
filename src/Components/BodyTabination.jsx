@@ -38,7 +38,7 @@ const BodyTabination = () => {
             </button>
           ))}
           <button className={styles.tab3} disabled>+ Add View (3/3)</button>
-          <button className={styles.tab3} disabled>All View (3/3)</button>
+          <button className={styles.tab3} disabled>+ Add View (3/3)</button>
         </div>
         
       </div>

@@ -10,15 +10,18 @@
  }
   
   .tab {
-    cursor: pointer;
+   cursor: pointer;
     background-color: #f3eeee;
     border: 1px solid #cacaca;
-    width: 16.5rem;
+    width: 19.5%;
     padding: 0.5rem;
    }
   .tab1 {
-    background-color: #fff;
+    border: none;
+     background-color: #fff;
     border-bottom: 1px solid #cacaca;
+     font-weight: bold;
+    padding: 0.5rem;
     width: 3rem;
   }
   .tab3{
@@ -35,7 +38,8 @@
   }
   
   .activeTab {
-    width: 16.5rem;
+    /* width: 16.5rem; */
+    /* width: max-content; */
     background-color: #fff;
     position: relative;
     border-bottom: none; 
@@ -46,7 +50,6 @@
     text-align: left;
  }
   
-
 .searchBar2{
     padding: 0.5rem 1rem;
     width: 100%;
@@ -71,20 +74,13 @@
     gap: 1rem;
     padding: 0.5rem;
 }
-.tab1HeaderLeft{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1rem;
-}
-.tab1HeaderLeft select{
+.tab1Header select{
     border: none;
-    font-weight: bold;
 }
 .tab1Header{
     display: flex;
 flex-wrap: wrap;
-justify-content: space-between;
+justify-content: space-around;
 padding: 1rem;
 align-items: center;
 }
@@ -94,6 +90,9 @@ align-items: center;
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
     font-weight: bold;
+}
+.AdvancedFilters{
+    font-size: small;
 }
 .searchBar{
     padding: 0.5rem 5rem;
@@ -147,6 +146,18 @@ tr:nth-of-type(2n+1) {
     .tableLeft{
         display: none;
     }   
+    .tab1 {
+        display: none;
+    }
+    .tab3{
+        border: none;
+    }
+    .tabButtons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
 
 

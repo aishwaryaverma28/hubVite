@@ -20,16 +20,38 @@
 .headerLeft {
   display: flex;
   align-items: center;
+  /* border: 2px solid black; */
+  padding: 1rem;
+  gap: 2.5rem;
 }
 
-.dropdownMenu {
-  border: none;
-  background-color: #51BFF0;
-  color: white;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.7rem;
+.dropdown{
+  position: relative;
 }
+.dropdownToggle{
+  background-color: #51BFF0;
+   border: none;
+   color: white;
+   font-size: 0.9rem;
+}
+.dropdownToggle:hover{
+  color: #ff7f00;
+  cursor: pointer;
+}
+.dropdownMenu{
+position: absolute;
+top: 2.8rem;
+right: 1rem;
+padding: 0.5rem;
+width: max-content;
+background: #51BFF0;
+border-radius: 5px;
+color: white;
+font-size: 0.9rem;
+line-height: 1.3rem;
+box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 
 .option {
   background-color: #264653;
